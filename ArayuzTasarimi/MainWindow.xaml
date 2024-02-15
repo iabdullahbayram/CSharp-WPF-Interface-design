@@ -1,0 +1,77 @@
+﻿<Window x:Class="ArayuzTasarimi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArayuzTasarimi"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="615" Width="783">
+    <Border CornerRadius="20" Margin="20">
+        <Border.Background>
+            <ImageBrush ImageSource="/resimler/rm422-076.jpg"/>
+        </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Column="1">
+                <Image Source="/resimler/6966266.png" Width="180"/>
+                <TextBlock Text="OTURUM AÇ" Foreground="White" FontSize="27"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="1" Grid.Row="1">
+                <TextBlock Text="Kullanıcı Adı" FontSize="30"
+                           Foreground="White"/>
+            </StackPanel>
+            
+            <Border Background="White" Grid.Column="1" Grid.Row="2" CornerRadius="10">
+                <Image Source="/resimler/470-4703547_privacy-icon-png.png"
+                       HorizontalAlignment="Left"/>
+            </Border>
+            
+            <StackPanel Grid.Column="1" Grid.Row="2">
+                <TextBox Background="White" Height="60" Width="440"
+                         HorizontalAlignment="Right" Margin="0,7,0,10"
+                         FontSize="30" Padding="10"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="1" Grid.Row="3">
+                <TextBlock Text="Parola" FontSize="30"
+                           Foreground="White"/>
+            </StackPanel>
+            
+            <Border Background="White" Grid.Column="1" Grid.Row="4" CornerRadius="10">
+                <Image Source="/resimler/421648.png"
+                       HorizontalAlignment="Left"/>
+            </Border>
+            
+            <StackPanel Grid.Column="1" Grid.Row="4">
+                <PasswordBox Background="White" Height="60" Width="440"
+                         HorizontalAlignment="Right" Margin="0,7,0,10"
+                         FontSize="30" Padding="10"/>
+            </StackPanel>
+
+            <Button Grid.Column="2" VerticalAlignment="Top">
+                <Image Source="/resimler/signs-close-icon-png.png"/>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+
+    </Border>
+</Window>
